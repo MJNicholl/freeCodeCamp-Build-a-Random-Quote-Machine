@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+:root{
+    /* random color variable */
+    --backgroundColor: rgb(13, 147, 154);
+
+    /* the other color */   
+    --detailColor: rgb(242, 242, 242);
+
+    /* font family */
+    --myFont: "Raleway", sans-serif;
+
+    /* box shadow */
+    --myBoxShadow: 5px 5px 20px rgb(0, 0, 0, 0.5);
+    --myButtonShadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+
+    /* text opacity */
+    --textOpacity: 1;
+
+    /* text shadow for bright backgrounds */
+    --shadowValue: 1px;
+    --textShadow: var(--shadowValue) var(--shadowValue) var(--shadowValue) rgb(0, 0, 0, 0.2);
+
+}
+
+body {
+    /* make flex box of body items and contents */
+    display: flex;
+    /* vertical align of flex box */
+    justify-content: center;
+    
+    /* horizontal align of flex box */
+    align-items: center;
+    height: 100vh;
+
+    background-color: var(--backgroundColor);
+}
+
+#text {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    opacity: var(--textOpacity);
+}
+
+#text::before{
+    content: '"';
+    font-size: 5rem;
+}
+
+#author, #text, #author::before {
+    color: var(--backgroundColor);
+    font-family: var(--myFont);
+    text-shadow: var(--textShadow);
+}
+
+#author::before{
+    content: "- ";
+}
+
+#author {
+    text-align: right;
+    margin-right: 20px;
+    opacity: var(--textOpacity);
+}
+
+#quote-box {
+    position: relative;
+    width: 400px;
+    height: auto;
+    box-shadow: var(--myBoxShadow);
+    border-radius: 10px;
+    background-color: var(--detailColor);
+    padding: 20px;
+}
+
+#new-quote {
+    right:-310px;
+    bottom: -12px;
+    position: relative;
+}
+
+input {
+    color: var(--detailColor);
+    background-color: var(--backgroundColor);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--myFont);
+    text-shadow: var(--textShadow);
+    box-shadow: var(--myButtonShadow);
+    height: 36px;
+    padding: 10px;
+}
+
+img {
+    background-color: var(--backgroundColor);
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    box-shadow: var(--myButtonShadow);
+    padding: 10px;
+    position: relative;
+    bottom: 20px;
+    left: 7px;
+}
+
+a:hover, input:hover{
+    opacity: 0.6;
+}
+
+a:active, input:active{
+    box-shadow: var(--myBoxShadow);
+}
+
+#buttons {
+    position: relative;
+    bottom: 0px;
+    height: 50px;
+}
