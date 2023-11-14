@@ -75,9 +75,10 @@ body {
 }
 
 #new-quote {
-    right:-310px;
-    bottom: -12px;
     position: relative;
+    bottom: -19px;
+    width: 90px;
+	margin-left: auto;
 }
 
 input {
